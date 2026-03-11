@@ -178,6 +178,35 @@ Header
     text-decoration: none !important;
 	  pointer-events: none !important;
 }
+
+/* Fix slider arrow glyph fallback when Font Awesome symbol mapping fails */
+.tg-slider-widget .swiper-button-next:before,
+.tg-slider-widget .swiper-button-prev:before {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: bold !important;
+    color: #313b48 !important;
+    background: #fff !important;
+    border-radius: 50% !important;
+    width: 50px !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    text-align: center !important;
+    display: block !important;
+}
+
+.tg-slider-widget .swiper-button-next:before {
+    content: "\2192" !important; /* → */
+}
+
+.tg-slider-widget .swiper-button-prev:before {
+    content: "\2190" !important; /* ← */
+}
+
+.tg-slider-widget .swiper-button-next:after,
+.tg-slider-widget .swiper-button-prev:after {
+    content: none !important;
+}
+
 		</style>
 		<style id="kirki-inline-styles">body{font-family:Montserrat;font-weight:400;}/* cyrillic-ext */
 @font-face {
@@ -482,7 +511,7 @@ Header
 						</div>
 					</div>
 
-						</div>
+		</div>
 		<div class="swiper-pagination"></div>
 		<div class="slider-arrow">
 			<div class="swiper-button-next"></div>
